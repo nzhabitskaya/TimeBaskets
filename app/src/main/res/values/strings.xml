@@ -13,9 +13,14 @@
     <string name="hint_1">1) Встаю утром</string>
     <string name="hint_2">2) душ</string>
     <string name="hint_3">3) завтрак</string>
-    <string name="hint_4">Работаю</string>
-    <string name="hint_5">обзоры</string>
-    <string name="hint_6">Учеба/ gym/ см блоги/ кино</string>
-    <string name="hint_9">Худ литра, история</string>
+    <string name="hint_4">1 дело</string>
+    <string name="hint_5">Работаю</string>
+    <string name="hint_6">обзоры</string>
+    <string name="hint_7">Учеба</string>
+    <string name="hint_8">gym, гуляю</string>
+    <string name="hint_9">см блоги, кино</string>
+    <string name="hint_10">Худ литра, история, adme.ru</string>
+    <string name="time_1">7.45</string>
+    <string name="time_2">23.00</string>
 
 </resources>

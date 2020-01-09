@@ -1,32 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/spacing_large"
-    android:layout_marginRight="@dimen/spacing_large"
-    android:background="@android:color/white"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="2dp">
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_left"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/spacing_large"
-        android:paddingLeft="@dimen/spacing_large"
-        android:paddingRight="@dimen/spacing_large"
-        android:paddingBottom="@dimen/spacing_large">
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:gravity="center_vertical"
-            android:text="@string/hint_6"
-            android:textSize="14sp"
-            android:textColor="@color/grey_80" />
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient_1">
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_large"
+                android:paddingRight="50dp"
+                android:paddingBottom="@dimen/spacing_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-</androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_7"
+                    android:textColor="@color/grey_80"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient_3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_large"
+                android:paddingRight="50dp"
+                android:paddingBottom="@dimen/spacing_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_9"
+                    android:textColor="@color/grey_80"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/cv_left"
+        app:layout_constraintRight_toLeftOf="@id/cv_right"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gradient_2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingTop="@dimen/spacing_large"
+                android:paddingRight="50dp"
+                android:paddingBottom="@dimen/spacing_large"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_8"
+                    android:textColor="@color/grey_80"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
