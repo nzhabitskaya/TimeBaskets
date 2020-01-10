@@ -31,29 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:gravity="center_vertical"
-            android:text="@string/hint_4"
-            android:textColor="@color/grey_80"
-            android:textSize="14sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:gravity="center_vertical"
             android:text="@string/hint_5"
             android:textColor="@color/grey_80"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:gravity="center_vertical"
-            android:text="@string/hint_6"
-            android:textColor="@color/grey_80"
-            android:textSize="14sp" />
+            android:layout_height="150dp" />
 
     </LinearLayout>
 

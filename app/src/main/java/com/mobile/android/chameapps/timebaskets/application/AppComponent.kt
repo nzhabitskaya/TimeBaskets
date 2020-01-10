@@ -1,12 +1,12 @@
 package com.mobile.android.chameapps.timebaskets.application
 
-import com.mobile.android.chameapps.timebaskets.ui.timetable.RulesContract
+import com.mobile.android.chameapps.timebaskets.room.di.RoomModule
+import com.mobile.android.chameapps.timebaskets.ui.categories.CategoriesContract
+import com.mobile.android.chameapps.timebaskets.ui.categories.di.CategoriesModule
+import com.mobile.android.chameapps.timebaskets.ui.categories.impl.CategoriesFragment
+import com.mobile.android.chameapps.timebaskets.ui.timetable.TimetableContract
 import com.mobile.android.chameapps.timebaskets.ui.timetable.di.TimetableModule
 import com.mobile.android.chameapps.timebaskets.ui.timetable.impl.TimetableFragment
-import com.mobile.android.chameapps.timebaskets.ui.main.MainActivityContract
-import com.mobile.android.chameapps.timebaskets.ui.main.di.MainModule
-import com.mobile.android.chameapps.timebaskets.ui.main.impl.MainActivity
-import com.mobile.android.chameapps.timebaskets.room.di.RoomModule
 import dagger.Component
 import javax.inject.Singleton
 
@@ -15,16 +15,16 @@ import javax.inject.Singleton
  */
 
 @Singleton
-@Component(modules = [ApplicationModule::class, MainModule::class, TimetableModule::class, RoomModule::class ])
+@Component(modules = [ApplicationModule::class, TimetableModule::class, CategoriesModule::class, RoomModule::class])
 interface AppComponent {
 
     val application: MyApplication?
 
-    val mainPresenter: MainActivityContract.Presenter
+    val timetablePresenter: TimetableContract.Presenter
 
-    val rulesPresenter: RulesContract.Presenter
-
-    fun inject(activity: MainActivity?)
+    val categoriesPresenter: CategoriesContract.Presenter
 
     fun inject(activity: TimetableFragment?)
+
+    fun inject(activity: CategoriesFragment?)
 }

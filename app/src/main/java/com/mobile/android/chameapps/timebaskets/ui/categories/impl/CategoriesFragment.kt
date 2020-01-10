@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.ui.timetable.impl
+package com.mobile.android.chameapps.timebaskets.ui.categories.impl
 
 import android.app.Dialog
 import android.os.Bundle
@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment
 import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
 import com.mobile.android.chameapps.timebaskets.room.enitities.Item
-import com.mobile.android.chameapps.timebaskets.ui.timetable.TimetableContract
+import com.mobile.android.chameapps.timebaskets.ui.categories.CategoriesContract
 import com.mobile.android.chameapps.timebaskets.ui.timetable.ui.CustomCardView
 import com.mobile.android.chameapps.timebaskets.ui.timetable.ui.CustomSpaceView
 import kotlinx.android.synthetic.main.dialog_add_post.*
@@ -28,10 +28,10 @@ import javax.inject.Singleton
  * Created by Natallia Zhabitskaya on 10/26/2019.
  */
 
-class TimetableFragment : Fragment(), TimetableContract.View {
+class CategoriesFragment : Fragment(), CategoriesContract.View {
 
     @Inject
-    lateinit var presenter: TimetableContract.Presenter
+    lateinit var presenter: CategoriesContract.Presenter
 
     private lateinit var mView: View
 
@@ -167,8 +167,8 @@ class TimetableFragment : Fragment(), TimetableContract.View {
 
     companion object {
         @Singleton
-        fun newInstance(): TimetableFragment {
-            val fragment = TimetableFragment()
+        fun newInstance(): CategoriesFragment {
+            val fragment = CategoriesFragment()
             return fragment
         }
     }

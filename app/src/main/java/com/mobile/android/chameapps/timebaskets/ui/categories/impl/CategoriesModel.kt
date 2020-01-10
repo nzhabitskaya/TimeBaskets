@@ -1,9 +1,9 @@
-package com.mobile.android.chameapps.timebaskets.ui.timetable.impl
+package com.mobile.android.chameapps.timebaskets.ui.categories.impl
 
 import com.mobile.android.chameapps.timebaskets.room.enitities.Item
 import com.mobile.android.chameapps.timebaskets.room.dao.RulesDao
 import com.mobile.android.chameapps.timebaskets.tools.Util
-import com.mobile.android.chameapps.timebaskets.ui.timetable.TimetableContract
+import com.mobile.android.chameapps.timebaskets.ui.categories.CategoriesContract
 import io.reactivex.Observable
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -12,7 +12,7 @@ import io.reactivex.schedulers.Schedulers
  * Created by Natallia Zhabitskaya on 12/26/2019.
  */
 
-class TimetableModel(private val rulesDao: RulesDao) : TimetableContract.Model {
+class CategoriesModel(private val rulesDao: RulesDao) : CategoriesContract.Model {
 
     private var subscriptions: CompositeDisposable? = null
 

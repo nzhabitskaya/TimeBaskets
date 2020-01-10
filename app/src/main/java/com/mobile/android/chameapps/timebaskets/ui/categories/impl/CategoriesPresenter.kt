@@ -1,13 +1,14 @@
-package com.mobile.android.chameapps.timebaskets.ui.timetable.impl
+package com.mobile.android.chameapps.timebaskets.ui.categories.impl
 
-import com.mobile.android.chameapps.timebaskets.ui.timetable.TimetableContract
+import com.mobile.android.chameapps.timebaskets.ui.categories.CategoriesContract
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
-class TimetablePresenter(private val model: TimetableContract.Model) : TimetableContract.Presenter {
+class CategoriesPresenter(private val model: CategoriesContract.Model) :
+    CategoriesContract.Presenter {
 
-    private lateinit var view: TimetableContract.View
+    private lateinit var view: CategoriesContract.View
 
     private var subscription: Disposable? = null
 
@@ -16,7 +17,7 @@ class TimetablePresenter(private val model: TimetableContract.Model) : Timetable
         model.unsubscribe()
     }
 
-    override fun attach(view: TimetableContract.View) {
+    override fun attach(view: CategoriesContract.View) {
         this.view = view
     }
 

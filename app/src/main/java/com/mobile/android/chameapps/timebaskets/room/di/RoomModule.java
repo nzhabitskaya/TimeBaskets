@@ -5,7 +5,7 @@ import android.app.Application;
 import androidx.room.Room;
 
 import com.mobile.android.chameapps.timebaskets.room.AppDatabase;
-import com.mobile.android.chameapps.timebaskets.room.RulesDao;
+import com.mobile.android.chameapps.timebaskets.room.dao.RulesDao;
 
 import javax.inject.Singleton;
 

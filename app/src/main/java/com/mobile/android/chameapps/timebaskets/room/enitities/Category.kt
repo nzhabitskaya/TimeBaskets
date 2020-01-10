@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.room
+package com.mobile.android.chameapps.timebaskets.room.enitities
 
 import androidx.room.Entity
 import androidx.room.Ignore
@@ -6,7 +6,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "rules", indices = [Index(value = ["id"], unique = true)])
-class Item {
+class Category {
 
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0

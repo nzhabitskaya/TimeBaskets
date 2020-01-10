@@ -1,10 +1,10 @@
-package com.mobile.android.chameapps.timebaskets.ui.timetable
+package com.mobile.android.chameapps.timebaskets.ui.categories
 
 import com.mobile.android.chameapps.timebaskets.mvp.BaseContract
-import com.mobile.android.chameapps.timebaskets.room.Item
+import com.mobile.android.chameapps.timebaskets.room.enitities.Item
 import io.reactivex.Observable
 
-class RulesContract {
+class CategoriesContract {
 
     interface View : BaseContract.View {
 
