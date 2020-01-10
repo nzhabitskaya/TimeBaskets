@@ -51,6 +51,13 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
         addCategory()
         addCategory()
         addCategory()
+        addCategory()
+        addCategory()
+        addCategory()
+        addCategory()
+        addCategory()
+        addCategory()
+        addCategory()
         addButton()
 
         return mView
