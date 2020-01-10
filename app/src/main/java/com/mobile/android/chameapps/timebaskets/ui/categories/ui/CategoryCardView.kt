@@ -16,7 +16,7 @@ class CategoryCardView @JvmOverloads constructor(
 ) : LinearLayout(context, attrs, defStyle) {
     init {
         val mRoot =
-            View.inflate(context, R.layout.cardview_layout_1, null)
+            View.inflate(context, R.layout.category, null)
         addView(mRoot, -1, -1)
         //mView = (ImageView) mRoot.findViewById(R.id.view);
     }

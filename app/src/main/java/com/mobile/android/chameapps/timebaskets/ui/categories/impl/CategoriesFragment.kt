@@ -4,13 +4,10 @@ import android.app.Dialog
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
@@ -48,64 +45,32 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        mView = inflater.inflate(R.layout.fragment_demo, container, false)
-        initToolbar(mView)
-
+        mView = inflater.inflate(R.layout.fragment_categories, container, false)
         mLinearLayout = mView.findViewById(R.id.cards_container)
 
-        addCard1()
-        addEmptySpace()
-        addCard2()
-        addEmptySpace()
-        addCard3()
-        addEmptySpace()
-        addCard4()
+        addCategory()
+        addCategory()
+        addCategory()
+        addButton()
 
         return mView
     }
 
-    private fun initToolbar(view: View) {
-        val toolbar = view.findViewById(R.id.toolbar) as Toolbar
-        toolbar.setNavigationIcon(R.drawable.ic_menu)
-        (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        (activity as AppCompatActivity).supportActionBar!!.setTitle(null)
-        (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-    }
-
     override fun displayItems(list: List<Item>) {
-        Log.e("ABC", "Items: " + list.size)
         for (items in list) {
             displayCard()
         }
     }
 
-    private fun addCard1() {
+    private fun addCategory() {
         val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.cardview_layout_1, mLinearLayout, false)
+            LayoutInflater.from(context).inflate(R.layout.category, mLinearLayout, false)
         mLinearLayout.addView(layout)
     }
 
-    private fun addCard2() {
+    private fun addButton() {
         val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.cardview_layout_2, mLinearLayout, false)
-        mLinearLayout.addView(layout)
-    }
-
-    private fun addCard3() {
-        val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.cardview_layout_3, mLinearLayout, false)
-        mLinearLayout.addView(layout)
-    }
-
-    private fun addCard4() {
-        val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.cardview_layout_4, mLinearLayout, false)
-        mLinearLayout.addView(layout)
-    }
-
-    private fun addEmptySpace() {
-        val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.spaceview_layout, mLinearLayout, false)
+            LayoutInflater.from(context).inflate(R.layout.category_add, mLinearLayout, false)
         mLinearLayout.addView(layout)
     }
 

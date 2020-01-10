@@ -3,6 +3,7 @@ package com.mobile.android.chameapps.timebaskets.ui.viewpager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.mobile.android.chameapps.timebaskets.ui.categories.impl.CategoriesFragment
 import com.mobile.android.chameapps.timebaskets.ui.timetable.impl.TimetableFragment
 
 /**
@@ -20,8 +21,12 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?) :
     override fun getItem(position: Int): Fragment {
         return if (position == 0) {
             TimetableFragment.newInstance()
-        } else {
-            TimetableFragment.newInstance()
+        }
+        else if (position == 1) {
+            CategoriesFragment.newInstance()
+        }
+        else {
+            CategoriesFragment.newInstance()
         }
     }
 

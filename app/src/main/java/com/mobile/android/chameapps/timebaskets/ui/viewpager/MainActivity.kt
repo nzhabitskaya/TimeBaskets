@@ -7,10 +7,6 @@ import com.mobile.android.chameapps.timebaskets.R
 
 class MainActivity : AppCompatActivity() {
 
-    enum class Screen {
-        LIST, DETAILS
-    }
-
     private var mPager: ViewPager? = null
     private var mAdapter: ViewPagerAdapter? = null
     override fun onCreate(savedInstanceState: Bundle?) {

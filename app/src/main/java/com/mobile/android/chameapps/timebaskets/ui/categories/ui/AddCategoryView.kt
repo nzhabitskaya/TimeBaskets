@@ -17,7 +17,7 @@ class AddCategoryView @JvmOverloads constructor(
 ) : LinearLayout(context, attrs, defStyle) {
     init {
         val mRoot =
-            View.inflate(context, R.layout.spaceview_layout, null)
+            View.inflate(context, R.layout.category_add, null)
         addView(mRoot, -1, -1)
         //mView = (ImageView) mRoot.findViewById(R.id.view);
     }
