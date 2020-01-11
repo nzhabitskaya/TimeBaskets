@@ -49,8 +49,6 @@ class TimetableFragment : Fragment(), TimetableContract.View {
         savedInstanceState: Bundle?
     ): View? {
         mView = inflater.inflate(R.layout.fragment_demo, container, false)
-        initToolbar(mView)
-
         mLinearLayout = mView.findViewById(R.id.cards_container)
 
         addCard1()
@@ -62,14 +60,6 @@ class TimetableFragment : Fragment(), TimetableContract.View {
         addCard4()
 
         return mView
-    }
-
-    private fun initToolbar(view: View) {
-        val toolbar = view.findViewById(R.id.toolbar) as Toolbar
-        toolbar.setNavigationIcon(R.drawable.ic_menu)
-        (activity as AppCompatActivity).setSupportActionBar(toolbar)
-        (activity as AppCompatActivity).supportActionBar!!.setTitle(null)
-        (activity as AppCompatActivity).supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun displayItems(list: List<Item>) {

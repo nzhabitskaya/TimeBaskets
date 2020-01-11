@@ -27,5 +27,6 @@
     <color name="transparent">@android:color/transparent</color>
     <color name="fragment_background">#4285f4</color>
     <color name="indigo_800_overlay">#283593</color>
+    <color name="cyan_800_overlay">#E600838F</color>
 
 </resources>
