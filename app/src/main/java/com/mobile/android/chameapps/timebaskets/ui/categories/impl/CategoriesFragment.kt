@@ -13,7 +13,7 @@ import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
 import com.mobile.android.chameapps.timebaskets.room.enitities.Item
 import com.mobile.android.chameapps.timebaskets.ui.categories.CategoriesContract
-import com.mobile.android.chameapps.timebaskets.ui.timetable.ui.CustomCardView
+import com.mobile.android.chameapps.timebaskets.ui.categories.ui.CategiryCard
 import com.mobile.android.chameapps.timebaskets.ui.timetable.ui.CustomSpaceView
 import kotlinx.android.synthetic.main.dialog_add_post.*
 import kotlinx.android.synthetic.main.fragment_demo.*
@@ -70,9 +70,7 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
     }
 
     private fun addCategory() {
-        val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.category, mLinearLayout, false)
-        mLinearLayout.addView(layout)
+        mLinearLayout.addView(CategiryCard(context))
     }
 
     private fun addButton() {
@@ -82,7 +80,11 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
     }
 
     override fun displayCard() {
-        cards_container.addView(CustomCardView(context))
+        cards_container.addView(
+            CategiryCard(
+                context
+            )
+        )
         cards_container.addView(CustomSpaceView(context))
     }
 

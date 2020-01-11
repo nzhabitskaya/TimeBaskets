@@ -9,14 +9,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
 import com.mobile.android.chameapps.timebaskets.room.enitities.Item
+import com.mobile.android.chameapps.timebaskets.ui.categories.ui.CategiryCard
+import com.mobile.android.chameapps.timebaskets.ui.piechart.PieChart
 import com.mobile.android.chameapps.timebaskets.ui.timetable.TimetableContract
-import com.mobile.android.chameapps.timebaskets.ui.timetable.ui.CustomCardView
 import com.mobile.android.chameapps.timebaskets.ui.timetable.ui.CustomSpaceView
 import kotlinx.android.synthetic.main.dialog_add_post.*
 import kotlinx.android.synthetic.main.fragment_demo.*
@@ -83,8 +82,27 @@ class TimetableFragment : Fragment(), TimetableContract.View {
 
     private fun addCard3() {
         val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.cardview_layout_3, mLinearLayout, false)
+            LayoutInflater.from(context).inflate(R.layout.piechart_layout, mLinearLayout, false)
         mLinearLayout.addView(layout)
+
+        val pieChart: PieChart = layout.findViewById(R.id.pieChart) as PieChart
+        val datas = FloatArray(6)
+        datas[0] = 34f
+        datas[1] = 24f
+        datas[2] = 32f
+        datas[3] = 24f
+        datas[4] = 53f
+        datas[5] = 23f
+        pieChart.setData(datas)
+
+        val labels = arrayOfNulls<String>(6)
+        labels[0] = "JOHN"
+        labels[1] = "GEORGE"
+        labels[2] = "RAYMOND"
+        labels[3] = "STEPHEN"
+        labels[4] = "JACK"
+        labels[5] = "BOBBY"
+        pieChart.setLabels(labels)
     }
 
     private fun addCard4() {
@@ -100,7 +118,11 @@ class TimetableFragment : Fragment(), TimetableContract.View {
     }
 
     override fun displayCard() {
-        cards_container.addView(CustomCardView(context))
+        cards_container.addView(
+            CategiryCard(
+                context
+            )
+        )
         cards_container.addView(CustomSpaceView(context))
     }
 
