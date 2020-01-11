@@ -20,13 +20,10 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?) :
     // Returns the fragment to display for that page
     override fun getItem(position: Int): Fragment {
         return if (position == 0) {
-            TimetableFragment.newInstance()
-        }
-        else if (position == 1) {
             CategoriesFragment.newInstance()
         }
         else {
-            CategoriesFragment.newInstance()
+            TimetableFragment.newInstance()
         }
     }
 

@@ -17,7 +17,7 @@ class CategiryCard @JvmOverloads constructor(
     init {
         val mRoot =
             View.inflate(context, R.layout.category, null)
-        addView(mRoot, -1, -1)
+        addView(mRoot)
         //mView = (ImageView) mRoot.findViewById(R.id.view);
     }
 }

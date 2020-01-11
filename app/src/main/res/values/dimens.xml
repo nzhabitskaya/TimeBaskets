@@ -8,5 +8,6 @@
     <dimen name="spacing_smlarge">18dp</dimen>
     <dimen name="spacing_mlarge">20dp</dimen>
     <dimen name="spacing_xmlarge">40dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
 
 </resources>

@@ -34,11 +34,11 @@ class PieChart : FrameLayout {
     }
 
     fun init() {
-        palette[0] = Color.parseColor("#EEDECF3F") // yellow
+        palette[0] = Color.parseColor("#EEF17CB0") // rose
         palette[1] = Color.parseColor("#EEd4d4ff") // cyan
         palette[2] = Color.parseColor("#EE4D4D4D") // gray
         palette[3] = Color.parseColor("#EE0090BD") // blue
-        palette[4] = Color.parseColor("#EEF17CB0") // rose
+        palette[4] = Color.parseColor("#EEDECF3F") // yellow
     }
 
     var pieSlices: ArrayList<PieSlice>? = null

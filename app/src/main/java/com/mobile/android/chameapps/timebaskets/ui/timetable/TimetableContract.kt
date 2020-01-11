@@ -11,8 +11,6 @@ class TimetableContract {
         fun displayItems(list: List<Item>)
 
         fun displayCard()
-
-        fun openDialog()
     }
 
     interface Presenter : BaseContract.Presenter<View> {
