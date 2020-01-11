@@ -21,19 +21,33 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="AppTheme.SubTitle">
+    <style name="AppTheme.SubTitle" parent="AppTheme.Text">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">italic|bold</item>
-        <item name="android:textSize">13sp</item>
-        <item name="android:fontFamily">@font/blogger_sans_light</item>
-        <item name="android:letterSpacing">0.075</item>
+        <item name="android:fontFamily">@fonts/blogger_sans_light.otf</item>
     </style>
 
     <style name="AppTheme.Text">
         <item name="android:textColor">@color/grey_80</item>
         <item name="android:textSize">13sp</item>
-        <item name="android:fontFamily">@font/blogger_sans_medium</item>
+        <item name="android:fontFamily">@fonts/blogger_sans_medium.otf</item>
         <item name="android:letterSpacing">0.075</item>
+    </style>
+
+    <style name="AppTheme.Time.Shadow" parent="AppTheme.Time">
+        <item name="android:shadowColor">@color/grey_80</item>
+        <item name="android:shadowDx">-2</item>
+    </style>
+
+    <style name="AppTheme.Time">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:shadowColor">@android:color/white</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:textColor">#E56717</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

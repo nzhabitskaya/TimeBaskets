@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:gravity="center_vertical"
-            android:text="@string/hint_5"
+            android:text="@string/hint_4"
             style="@style/AppTheme.Text" />
 
         <View

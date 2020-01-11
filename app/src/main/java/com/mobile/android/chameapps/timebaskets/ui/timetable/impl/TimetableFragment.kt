@@ -86,28 +86,22 @@ class TimetableFragment : Fragment(), TimetableContract.View {
         mLinearLayout.addView(layout)
 
         val pieChart: PieChart = layout.findViewById(R.id.pieChart) as PieChart
-        val datas = FloatArray(6)
-        datas[0] = 34f
-        datas[1] = 24f
-        datas[2] = 32f
-        datas[3] = 24f
-        datas[4] = 53f
-        datas[5] = 23f
+        val datas = FloatArray(3)
+        datas[0] = 30f
+        datas[1] = 30f
+        datas[2] = 30f
         pieChart.setData(datas)
 
-        val labels = arrayOfNulls<String>(6)
-        labels[0] = "JOHN"
-        labels[1] = "GEORGE"
-        labels[2] = "RAYMOND"
-        labels[3] = "STEPHEN"
-        labels[4] = "JACK"
-        labels[5] = "BOBBY"
+        val labels = arrayOfNulls<String>(3)
+        labels[0] = getString(R.string.hint_5)
+        labels[1] = getString(R.string.hint_6)
+        labels[2] = getString(R.string.hint_7)
         pieChart.setLabels(labels)
     }
 
     private fun addCard4() {
         val layout: View =
-            LayoutInflater.from(context).inflate(R.layout.cardview_layout_4, mLinearLayout, false)
+            LayoutInflater.from(context).inflate(R.layout.cardview_layout_3, mLinearLayout, false)
         mLinearLayout.addView(layout)
     }
 
