@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesFragment
-import com.mobile.android.chameapps.timebaskets.screens.timetable.impl.TimetableFragment
+import com.mobile.android.chameapps.timebaskets.screens.timetable.TimetableFragment
 
 /**
  * Created by n.zhabitskaya on 2019-07-09.

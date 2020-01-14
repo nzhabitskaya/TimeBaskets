@@ -4,9 +4,9 @@ import com.mobile.android.chameapps.timebaskets.room.di.RoomModule
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
 import com.mobile.android.chameapps.timebaskets.screens.categories.di.CategoriesModule
 import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesFragment
-import com.mobile.android.chameapps.timebaskets.screens.timetable.TimetableContract
-import com.mobile.android.chameapps.timebaskets.screens.timetable.di.TimetableModule
-import com.mobile.android.chameapps.timebaskets.screens.timetable.impl.TimetableFragment
+import com.mobile.android.chameapps.timebaskets.screens.dialog.CategoryDialogContract
+import com.mobile.android.chameapps.timebaskets.screens.dialog.di.CategoryDialogModule
+import com.mobile.android.chameapps.timebaskets.screens.dialog.impl.CategoryDialogActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -15,16 +15,16 @@ import javax.inject.Singleton
  */
 
 @Singleton
-@Component(modules = [ApplicationModule::class, TimetableModule::class, CategoriesModule::class, RoomModule::class])
+@Component(modules = [ApplicationModule::class, CategoriesModule::class, CategoryDialogModule::class, RoomModule::class])
 interface AppComponent {
 
     val application: MyApplication?
 
-    val timetablePresenter: TimetableContract.Presenter
-
     val categoriesPresenter: CategoriesContract.Presenter
 
-    fun inject(activity: TimetableFragment?)
+    val categoryDialogPresenter: CategoryDialogContract.Presenter
 
-    fun inject(activity: CategoriesFragment?)
+    fun inject(fragment: CategoriesFragment?)
+
+    fun inject(activity: CategoryDialogActivity?)
 }

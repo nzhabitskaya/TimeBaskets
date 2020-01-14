@@ -21,11 +21,6 @@ class CategoriesPresenter(private val model: CategoriesContract.Model) :
         this.view = view
     }
 
-    override fun saveItem(title: String, description: String) {
-        model.saveItem(title, description)
-        loadItems()
-    }
-
     override fun loadItems() {
         subscription = model.loadItems()
             .subscribeOn(Schedulers.io())

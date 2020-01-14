@@ -1,6 +1,6 @@
 package com.mobile.android.chameapps.timebaskets.screens.categories.di
 
-import com.mobile.android.chameapps.timebaskets.room.dao.RulesDao
+import com.mobile.android.chameapps.timebaskets.room.dao.CategoriesDao
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
 import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesModel
 import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesPresenter
@@ -18,7 +18,7 @@ class CategoriesModule {
 
     @Provides
     @Singleton
-    fun provideModel(categoriesDao: RulesDao): CategoriesContract.Model {
+    fun provideModel(categoriesDao: CategoriesDao): CategoriesContract.Model {
         return CategoriesModel(categoriesDao)
     }
 }

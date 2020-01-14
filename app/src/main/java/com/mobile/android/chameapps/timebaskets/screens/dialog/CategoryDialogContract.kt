@@ -1,23 +1,23 @@
-package com.mobile.android.chameapps.timebaskets.screens.categories
+package com.mobile.android.chameapps.timebaskets.screens.dialog
 
+import android.graphics.drawable.Drawable
 import com.mobile.android.chameapps.timebaskets.mvp.BaseContract
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
-import io.reactivex.Observable
+import io.reactivex.subjects.PublishSubject
 
-class CategoriesContract {
+class CategoryDialogContract {
 
     interface View : BaseContract.View {
 
-        fun displayItems(list: List<Category>)
+        val clickSave: PublishSubject<Pair<String, Drawable>>
     }
 
     interface Presenter : BaseContract.Presenter<View> {
 
-        fun loadItems()
     }
 
     interface Model : BaseContract.Model {
 
-        fun loadItems(): Observable<List<Category>>
+        fun saveItem(category: Category)
     }
 }

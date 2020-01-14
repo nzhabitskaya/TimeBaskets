@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.room.Room;
 
 import com.mobile.android.chameapps.timebaskets.room.AppDatabase;
+import com.mobile.android.chameapps.timebaskets.room.dao.CategoriesDao;
 import com.mobile.android.chameapps.timebaskets.room.dao.RulesDao;
 
 import javax.inject.Singleton;
@@ -22,7 +23,7 @@ public class RoomModule {
     private AppDatabase database;
 
     public RoomModule(Application mApplication) {
-        database = Room.databaseBuilder(mApplication, AppDatabase.class, "rules-db").build();
+        database = Room.databaseBuilder(mApplication, AppDatabase.class, "todos-db").build();
     }
 
     @Singleton
@@ -35,5 +36,11 @@ public class RoomModule {
     @Provides
     RulesDao providesRulesDao(AppDatabase database) {
         return database.rulesDao();
+    }
+
+    @Singleton
+    @Provides
+    CategoriesDao providesCategoriesDao(AppDatabase database) {
+        return database.categoriesDao();
     }
 }
