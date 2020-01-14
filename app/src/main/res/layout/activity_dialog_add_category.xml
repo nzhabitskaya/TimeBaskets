@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -57,7 +57,8 @@
                     android:background="@drawable/circle_shape_white"
                     android:padding="25dp"
                     android:tint="@color/grey_20"
-                    app:srcCompat="@drawable/ic_photo_camera" />
+                    app:srcCompat="@drawable/ic_photo_camera"
+                    android:onClick="pickGalleryImage"/>
 
             </RelativeLayout>
 

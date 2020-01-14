@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">My ToDos</string>
     <string name="action_settings">Settings</string>
 
     <!-- Menu Drawer -->
@@ -17,10 +17,13 @@
     <string name="hint_5">English</string>
     <string name="hint_6">Gym</string>
     <string name="hint_7">см Блоги</string>
-    <string name="hint_8">Худ литра, история</string>
-    <string name="time_1">7.45</string>
+    <string name="hint_8">Мой апп</string>
+    <string name="hint_9">Худ литра, история</string>
+    <string name="time_1">7.15</string>
     <string name="time_2">23.00</string>
     <string name="title">Title</string>
     <string name="create_category">CREATE CATEGORY</string>
+
+    <string name="image_picker_provider_authority_suffix">.provider</string>
 
 </resources>

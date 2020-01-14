@@ -1,12 +1,12 @@
 package com.mobile.android.chameapps.timebaskets.application
 
 import com.mobile.android.chameapps.timebaskets.room.di.RoomModule
-import com.mobile.android.chameapps.timebaskets.ui.categories.CategoriesContract
-import com.mobile.android.chameapps.timebaskets.ui.categories.di.CategoriesModule
-import com.mobile.android.chameapps.timebaskets.ui.categories.impl.CategoriesFragment
-import com.mobile.android.chameapps.timebaskets.ui.timetable.TimetableContract
-import com.mobile.android.chameapps.timebaskets.ui.timetable.di.TimetableModule
-import com.mobile.android.chameapps.timebaskets.ui.timetable.impl.TimetableFragment
+import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
+import com.mobile.android.chameapps.timebaskets.screens.categories.di.CategoriesModule
+import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesFragment
+import com.mobile.android.chameapps.timebaskets.screens.timetable.TimetableContract
+import com.mobile.android.chameapps.timebaskets.screens.timetable.di.TimetableModule
+import com.mobile.android.chameapps.timebaskets.screens.timetable.impl.TimetableFragment
 import dagger.Component
 import javax.inject.Singleton
 

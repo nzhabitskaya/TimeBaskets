@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="210dp">
 
-    <com.mobile.android.chameapps.timebaskets.ui.piechart.PieChart
+    <com.mobile.android.chameapps.timebaskets.screens.timetable.ui.piechart.PieChart
         android:id="@+id/pieChart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

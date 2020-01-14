@@ -13,16 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.viewpager.MainActivity"
+        <activity android:name=".screens.viewpager.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".ui.dialog.AddCategoryDialogActivity"
+            android:name="com.mobile.android.chameapps.timebaskets.screens.categories.ui.dialog.AddCategoryDialogActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name="com.mobile.android.chameapps.timebaskets.screens.categories.ui.imagepicker.ImagePickerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_picker_provider_paths" />
+
+        </provider>
     </application>
 
 </manifest>
