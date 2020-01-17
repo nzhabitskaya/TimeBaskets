@@ -19,7 +19,7 @@ import javax.inject.Inject
 
 class CategoryDialogActivity : AppCompatActivity(), CategoryDialogContract.View {
 
-    override val clickSave: PublishSubject<Pair<String, Drawable>> = PublishSubject.create()
+    override val clickSave: PublishSubject<Pair<String, Drawable?>> = PublishSubject.create()
 
     @Inject
     lateinit var presenter: CategoryDialogContract.Presenter
@@ -39,8 +39,12 @@ class CategoryDialogActivity : AppCompatActivity(), CategoryDialogContract.View 
                 applicationContext, "Create Account", Toast.LENGTH_SHORT
             ).show()
 
-            clickSave.onNext(Pair(input.text.toString(), bg.background))
+            clickSave.onNext(Pair(input.text.toString(), bg.drawable))
         }
+    }
+
+    override fun closeDialog() {
+        finish()
     }
 
     fun pickGalleryImage(view: View) {

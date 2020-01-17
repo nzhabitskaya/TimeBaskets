@@ -1,6 +1,7 @@
 package com.mobile.android.chameapps.timebaskets.screens.categories.impl
 
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,6 +13,8 @@ import com.mobile.android.chameapps.timebaskets.application.MyApplication
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
 import com.mobile.android.chameapps.timebaskets.screens.dialog.impl.CategoryDialogActivity
+import kotlinx.android.synthetic.main.category.view.*
+import java.io.ByteArrayInputStream
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -33,7 +36,6 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
         super.onCreate(savedInstanceState)
         injectDependency()
         presenter.attach(this)
-        presenter.loadItems()
     }
 
     override fun onCreateView(
@@ -46,17 +48,26 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
     }
 
     override fun displayItems(list: List<Category>) {
-        Log.e("ABC", "Items: " + list.size)
-        for (items in list) {
-            addCategory()
+        mLinearLayout.removeAllViews()
+        for (item in list) {
+            addCategory(item)
         }
         addButton()
     }
 
-    private fun addCategory() {
-        val layout: View =
+    override fun onResume() {
+        super.onResume()
+        presenter.loadItems()
+    }
+
+    private fun addCategory(category: Category) {
+        val categoryLayout: View =
             LayoutInflater.from(context).inflate(R.layout.category, mLinearLayout, false)
-        mLinearLayout.addView(layout)
+        mLinearLayout.addView(categoryLayout)
+        categoryLayout.title.text = category.title
+        categoryLayout.title_shadow.text = category.title
+        val inputStream = ByteArrayInputStream(category.byteArray)
+        categoryLayout.iv.setImageBitmap(BitmapFactory.decodeStream(inputStream))
     }
 
     private fun addButton() {

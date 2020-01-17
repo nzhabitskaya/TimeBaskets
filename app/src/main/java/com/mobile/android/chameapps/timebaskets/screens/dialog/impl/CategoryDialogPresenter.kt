@@ -30,12 +30,15 @@ class CategoryDialogPresenter(private val model: CategoryDialogContract.Model) :
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {(title, image) ->
-                val bitmap = (image as BitmapDrawable).bitmap
-                val stream = ByteArrayOutputStream()
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-                val bitmapdata: ByteArray = stream.toByteArray()
+                if(image != null) {
+                    val bitmap = (image as BitmapDrawable).bitmap
+                    val stream = ByteArrayOutputStream()
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+                    val bitmapdata: ByteArray = stream.toByteArray()
 
-                model.saveItem(Category(title, Util.getCurrentTime(), bitmapdata))
+                    model.saveItem(Category(title, Util.getCurrentTime(), bitmapdata))
+                }
+                view.closeDialog()
             }
     }
 }

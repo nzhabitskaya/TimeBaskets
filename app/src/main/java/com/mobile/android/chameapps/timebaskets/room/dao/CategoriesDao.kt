@@ -7,6 +7,7 @@ import io.reactivex.Observable
 
 @Dao
 interface CategoriesDao {
+
     @Query("SELECT * FROM categories ORDER BY timestamp DESC")
     fun findAll(): Observable<List<Category>>
 

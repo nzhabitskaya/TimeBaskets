@@ -9,7 +9,9 @@ class CategoryDialogContract {
 
     interface View : BaseContract.View {
 
-        val clickSave: PublishSubject<Pair<String, Drawable>>
+        val clickSave: PublishSubject<Pair<String, Drawable?>>
+
+        fun closeDialog()
     }
 
     interface Presenter : BaseContract.Presenter<View> {

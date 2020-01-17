@@ -34,12 +34,6 @@ public class RoomModule {
 
     @Singleton
     @Provides
-    RulesDao providesRulesDao(AppDatabase database) {
-        return database.rulesDao();
-    }
-
-    @Singleton
-    @Provides
     CategoriesDao providesCategoriesDao(AppDatabase database) {
         return database.categoriesDao();
     }

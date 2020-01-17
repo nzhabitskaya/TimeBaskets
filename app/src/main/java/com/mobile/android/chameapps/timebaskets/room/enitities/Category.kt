@@ -2,15 +2,20 @@ package com.mobile.android.chameapps.timebaskets.room.enitities
 
 import androidx.room.*
 
-@Entity(tableName = "categories", indices = [Index(value = ["id"], unique = true)])
+@Entity(tableName = "categories")
 class Category {
 
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
+
+    @ColumnInfo(name = "title")
     var title: String
+
+    @ColumnInfo(name = "timestamp")
     var timestamp: String? = null
+
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
-    var image: ByteArray? = null
+    var byteArray: ByteArray? = null
 
     @Ignore
     constructor() {
@@ -18,9 +23,9 @@ class Category {
         this.timestamp = null
     }
 
-    constructor(title: String, timestamp: String, image: ByteArray) {
+    constructor(title: String, timestamp: String, byteArray: ByteArray) {
         this.title = title
         this.timestamp = timestamp
-        this.image = image
+        this.byteArray = byteArray
     }
 }
