@@ -6,7 +6,7 @@ import androidx.room.Room;
 
 import com.mobile.android.chameapps.timebaskets.room.AppDatabase;
 import com.mobile.android.chameapps.timebaskets.room.dao.CategoriesDao;
-import com.mobile.android.chameapps.timebaskets.room.dao.RulesDao;
+import com.mobile.android.chameapps.timebaskets.room.dao.ItemsDao;
 
 import javax.inject.Singleton;
 
@@ -36,5 +36,11 @@ public class RoomModule {
     @Provides
     CategoriesDao providesCategoriesDao(AppDatabase database) {
         return database.categoriesDao();
+    }
+
+    @Singleton
+    @Provides
+    ItemsDao providesItemsDao(AppDatabase database) {
+        return database.itemsDao();
     }
 }

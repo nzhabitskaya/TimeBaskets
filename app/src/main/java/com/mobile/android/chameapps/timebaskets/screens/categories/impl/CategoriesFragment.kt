@@ -3,7 +3,6 @@ package com.mobile.android.chameapps.timebaskets.screens.categories.impl
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
-import com.mobile.android.chameapps.timebaskets.screens.dialog.impl.CategoryDialogActivity
+import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.impl.CategoryDialogActivity
 import kotlinx.android.synthetic.main.category.view.*
 import java.io.ByteArrayInputStream
 import javax.inject.Inject
