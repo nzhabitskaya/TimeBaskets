@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.screens.categories.dialog
+package com.mobile.android.chameapps.timebaskets.screens.add_dialog
 
 import android.graphics.drawable.Drawable
 import com.mobile.android.chameapps.timebaskets.mvp.BaseContract

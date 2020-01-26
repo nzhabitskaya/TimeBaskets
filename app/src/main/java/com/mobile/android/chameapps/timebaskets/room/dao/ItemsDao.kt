@@ -17,11 +17,11 @@ interface ItemsDao {
     fun findById(id: String?): Item
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(word: Item): Long
+    fun insert(item: Item): Long
 
     @Update
-    fun update(word: Item): Int
+    fun update(item: Item): Int
 
     @Delete
-    fun delete(word: Item)
+    fun delete(item: Item)
 }

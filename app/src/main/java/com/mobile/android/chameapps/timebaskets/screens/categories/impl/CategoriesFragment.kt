@@ -11,7 +11,8 @@ import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.impl.CategoryDialogActivity
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl.CategoryDialogActivity
+import com.mobile.android.chameapps.timebaskets.screens.todolist.impl.TodoListActivity
 import kotlinx.android.synthetic.main.category.view.*
 import java.io.ByteArrayInputStream
 import javax.inject.Inject
@@ -67,6 +68,7 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
         categoryLayout.title_shadow.text = category.title
         val inputStream = ByteArrayInputStream(category.byteArray)
         categoryLayout.iv.setImageBitmap(BitmapFactory.decodeStream(inputStream))
+        categoryLayout.setOnClickListener { clickCategory() }
     }
 
     private fun addButton() {
@@ -77,6 +79,12 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
             val myIntent = Intent(context, CategoryDialogActivity::class.java)
             context?.startActivity(myIntent)
         }
+    }
+
+    private fun clickCategory() {
+        val intent = Intent(context, TodoListActivity::class.java)
+        //i.putExtra("PersonID", personID)
+        startActivity(intent)
     }
 
     private fun injectDependency() {

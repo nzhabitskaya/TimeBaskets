@@ -22,10 +22,13 @@
         </activity>
 
         <activity
-            android:name="com.mobile.android.chameapps.timebaskets.screens.categories.dialog.impl.CategoryDialogActivity"
+            android:name="com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl.CategoryDialogActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
-        <activity android:name="com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.ImagePickerActivity"
+        <activity android:name="com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.ImagePickerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".screens.todolist.impl.TodoListActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <provider

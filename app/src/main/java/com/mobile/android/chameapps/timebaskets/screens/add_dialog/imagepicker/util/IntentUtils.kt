@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.util
+package com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.util
 
 import android.content.Context
 import android.content.Intent

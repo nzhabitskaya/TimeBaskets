@@ -28,7 +28,8 @@ class TodoListModel(private val itemsDao: ItemsDao) : TodoListContract.Model {
     override fun saveItem(item: Item) {
         subscriptions?.add(Observable.just(itemsDao)
             .subscribeOn(Schedulers.io())
-            .subscribe { db -> db.insert(item) }
+            .subscribe { db ->
+                db.insert(item) }
         )
     }
 }

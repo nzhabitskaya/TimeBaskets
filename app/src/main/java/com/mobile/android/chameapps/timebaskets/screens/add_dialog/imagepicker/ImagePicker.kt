@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker
+package com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker
 
 import android.app.Activity
 import android.content.Intent
@@ -7,9 +7,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.github.florent37.inlineactivityresult.kotlin.startForResult
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.constant.ImageProvider
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.listener.ResultListener
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.util.DialogHelper
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.constant.ImageProvider
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.listener.ResultListener
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.util.DialogHelper
 import java.io.File
 
 open class ImagePicker {

@@ -4,12 +4,12 @@ import com.mobile.android.chameapps.timebaskets.room.di.RoomModule
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
 import com.mobile.android.chameapps.timebaskets.screens.categories.di.CategoriesModule
 import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesFragment
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.CategoryDialogContract
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.di.CategoryDialogModule
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.impl.CategoryDialogActivity
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.CategoryDialogContract
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.di.CategoryDialogModule
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl.CategoryDialogActivity
 import com.mobile.android.chameapps.timebaskets.screens.todolist.TodoListContract
 import com.mobile.android.chameapps.timebaskets.screens.todolist.di.TodoListModule
-import com.mobile.android.chameapps.timebaskets.screens.todolist.impl.TodoListFragment
+import com.mobile.android.chameapps.timebaskets.screens.todolist.impl.TodoListActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -31,7 +31,7 @@ interface AppComponent {
 
     fun inject(fragment: CategoriesFragment?)
 
-    fun inject(fragment: TodoListFragment?)
+    fun inject(fragment: TodoListActivity?)
 
     fun inject(activity: CategoryDialogActivity?)
 }

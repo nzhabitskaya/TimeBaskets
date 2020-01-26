@@ -1,17 +1,20 @@
 package com.mobile.android.chameapps.timebaskets.room.enitities
 
-import androidx.room.Entity
-import androidx.room.Ignore
-import androidx.room.Index
-import androidx.room.PrimaryKey
+import androidx.room.*
 
 @Entity(tableName = "items", indices = [Index(value = ["id"], unique = true)])
 class Item {
 
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
+
+    @ColumnInfo(name = "title")
     var title: String
+
+    @ColumnInfo(name = "timestamp")
     var timestamp: String? = null
+
+    @ColumnInfo(name = "category_id")
     var categoryId: Long = 0
 
     @Ignore

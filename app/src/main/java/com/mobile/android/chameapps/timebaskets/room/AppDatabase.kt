@@ -14,5 +14,6 @@ import com.mobile.android.chameapps.timebaskets.room.enitities.Item
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun categoriesDao(): CategoriesDao?
+
     abstract fun itemsDao(): ItemsDao?
 }

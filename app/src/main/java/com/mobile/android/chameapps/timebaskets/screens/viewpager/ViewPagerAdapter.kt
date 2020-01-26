@@ -5,7 +5,6 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesFragment
 import com.mobile.android.chameapps.timebaskets.screens.timetable.TimetableFragment
-import com.mobile.android.chameapps.timebaskets.screens.todolist.impl.TodoListFragment
 
 /**
  * Created by n.zhabitskaya on 2019-07-09.
@@ -21,8 +20,7 @@ class ViewPagerAdapter(fragmentManager: FragmentManager?) :
     // Returns the fragment to display for that page
     override fun getItem(position: Int): Fragment {
         return if (position == 0) {
-            TodoListFragment.newInstance()
-            //CategoriesFragment.newInstance()
+            CategoriesFragment.newInstance()
         }
         else {
             TimetableFragment.newInstance()

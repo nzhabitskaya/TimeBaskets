@@ -1,9 +1,9 @@
-package com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.provider
+package com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.provider
 
 import android.content.ContextWrapper
 import android.os.Bundle
 import android.widget.Toast
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.ImagePickerActivity
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.ImagePickerActivity
 
 abstract class BaseProvider(protected val activity: ImagePickerActivity) : ContextWrapper(activity) {
 

@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.screens.categories.dialog.impl
+package com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl
 
 import android.app.Activity
 import android.content.Intent
@@ -10,9 +10,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.CategoryDialogContract
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.ImagePicker
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.imagepicker.setLocalImage
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.CategoryDialogContract
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.ImagePicker
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.setLocalImage
 import io.reactivex.subjects.PublishSubject
 import kotlinx.android.synthetic.main.activity_dialog_add_category.*
 import javax.inject.Inject

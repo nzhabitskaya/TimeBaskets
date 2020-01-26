@@ -1,8 +1,8 @@
-package com.mobile.android.chameapps.timebaskets.screens.categories.dialog.impl
+package com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl
 
 import com.mobile.android.chameapps.timebaskets.room.dao.CategoriesDao
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
-import com.mobile.android.chameapps.timebaskets.screens.categories.dialog.CategoryDialogContract
+import com.mobile.android.chameapps.timebaskets.screens.add_dialog.CategoryDialogContract
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
