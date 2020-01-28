@@ -29,7 +29,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".screens.todolist.impl.TodoListActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.Fullscreen"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

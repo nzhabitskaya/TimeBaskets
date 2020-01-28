@@ -4,16 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:id="@+id/background_container"
-    android:background="@android:color/white">
-
-    <!--ImageView
-        android:id="@+id/background_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:cropToPadding="true"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/bg_image" /-->
+    android:id="@+id/background_container">
 
     <LinearLayout
         android:id="@+id/foreground_container"
@@ -25,7 +16,7 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:scrollbars="vertical"
             android:scrollingCache="true"/>
@@ -34,12 +25,13 @@
             android:id="@+id/edit_text"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
+            android:gravity="top"
             android:background="@android:color/transparent"
             android:ems="10"
-            android:textSize="12sp"
+            android:textSize="16sp"
             android:layout_marginTop="8dp"
             android:layout_marginStart="15dp"
-            android:textColor="#000000"
+            android:textColor="@android:color/white"
             android:inputType="text"
             tools:ignore="Autofill,LabelFor" />
 

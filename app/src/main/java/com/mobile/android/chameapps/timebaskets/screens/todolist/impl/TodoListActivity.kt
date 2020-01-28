@@ -110,8 +110,8 @@ class TodoListActivity : AppCompatActivity(), TodoListContract.View {
 
         val alpha = 230
         val hue = rnd.nextInt(360).toFloat()
-        val sat = 49f
-        val value = 67f
+        val sat = 0.5f
+        val value = 0.5f
 
         return Color.HSVToColor(alpha, floatArrayOf(hue, sat, value))
     }
