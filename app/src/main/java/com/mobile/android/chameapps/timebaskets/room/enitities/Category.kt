@@ -12,15 +12,16 @@ class Category {
     var title: String
 
     @ColumnInfo(name = "timestamp")
-    var timestamp: String? = null
+    var timestamp: String
 
     @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
-    var byteArray: ByteArray? = null
+    var byteArray: ByteArray?
 
     @Ignore
     constructor() {
         this.title = ""
-        this.timestamp = null
+        this.timestamp = ""
+        this.byteArray = null
     }
 
     constructor(title: String, timestamp: String, byteArray: ByteArray) {

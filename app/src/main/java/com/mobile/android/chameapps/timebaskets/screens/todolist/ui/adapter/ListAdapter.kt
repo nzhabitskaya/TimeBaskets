@@ -23,7 +23,8 @@ class ListAdapter : RecyclerView.Adapter<ListItemViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ListItemViewHolder, position: Int) {
-        holder.itemName.text = list!![position].title
+        val text = (position + 1).toString().plus(") ").plus(list!![position].title)
+        holder.itemName.text = text
     }
 
     override fun getItemCount(): Int {

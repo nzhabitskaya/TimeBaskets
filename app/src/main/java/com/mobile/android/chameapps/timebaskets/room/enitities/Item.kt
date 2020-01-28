@@ -2,7 +2,7 @@ package com.mobile.android.chameapps.timebaskets.room.enitities
 
 import androidx.room.*
 
-@Entity(tableName = "items", indices = [Index(value = ["id"], unique = true)])
+@Entity(tableName = "items", indices = [Index(value = ["title"], unique = true)])
 class Item {
 
     @PrimaryKey(autoGenerate = true)

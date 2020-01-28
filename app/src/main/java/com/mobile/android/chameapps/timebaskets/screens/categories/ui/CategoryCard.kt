@@ -9,7 +9,7 @@ import com.mobile.android.chameapps.timebaskets.R
 /**
  * Created by Natallia Zhabitskaya on 12/30/2019.
  */
-class CategiryCard @JvmOverloads constructor(
+class CategoryCard @JvmOverloads constructor(
     context: Context?,
     attrs: AttributeSet? = null,
     defStyle: Int = 0

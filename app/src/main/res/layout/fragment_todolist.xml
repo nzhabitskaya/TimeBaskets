@@ -3,9 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:id="@+id/background_container"
+    android:background="@android:color/white">
+
+    <!--ImageView
+        android:id="@+id/background_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/bg_image" /-->
 
     <LinearLayout
+        android:id="@+id/foreground_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -14,7 +25,7 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginStart="10dp"
             android:scrollbars="vertical"
             android:scrollingCache="true"/>
@@ -22,9 +33,13 @@
         <EditText
             android:id="@+id/edit_text"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_yellow"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
             android:ems="10"
+            android:textSize="12sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:textColor="#000000"
             android:inputType="text"
             tools:ignore="Autofill,LabelFor" />
 

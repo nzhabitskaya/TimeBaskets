@@ -68,7 +68,7 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
         categoryLayout.title_shadow.text = category.title
         val inputStream = ByteArrayInputStream(category.byteArray)
         categoryLayout.iv.setImageBitmap(BitmapFactory.decodeStream(inputStream))
-        categoryLayout.setOnClickListener { clickCategory() }
+        categoryLayout.setOnClickListener { clickCategory(category.id) }
     }
 
     private fun addButton() {
@@ -81,9 +81,9 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
         }
     }
 
-    private fun clickCategory() {
+    private fun clickCategory(id: Long) {
         val intent = Intent(context, TodoListActivity::class.java)
-        //i.putExtra("PersonID", personID)
+        intent.putExtra(CATEGORY_ID, id)
         startActivity(intent)
     }
 
@@ -92,6 +92,10 @@ class CategoriesFragment : Fragment(), CategoriesContract.View {
     }
 
     companion object {
+
+        const val CATEGORY_ID = "category_id"
+        const val BG_IMAGE = "bg_image"
+
         @Singleton
         fun newInstance(): CategoriesFragment {
             val fragment = CategoriesFragment()

@@ -22,12 +22,21 @@ class TodoListPresenter(private val model: TodoListContract.Model) :
         this.view = view
     }
 
-    override fun loadItems() {
-        subscription = model.loadItems()
+    override fun loadItems(categoryId: Long) {
+        subscription = model.loadItems(categoryId)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe {
                 view.displayItems(it)
+            }
+    }
+
+    override fun loadBackground(categoryId: Long) {
+        subscription = model.loadBackground(categoryId)
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
+                view.displayBackground(it)
             }
     }
 

@@ -19,7 +19,7 @@ class TodoListModule {
 
     @Provides
     @Singleton
-    fun provideModel(itemsDao: ItemsDao): TodoListContract.Model {
-        return TodoListModel(itemsDao)
+    fun provideModel(itemsDao: ItemsDao, categoriesDao: CategoriesDao): TodoListContract.Model {
+        return TodoListModel(itemsDao, categoriesDao)
     }
 }

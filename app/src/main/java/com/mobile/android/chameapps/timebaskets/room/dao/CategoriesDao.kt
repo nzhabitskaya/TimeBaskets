@@ -1,6 +1,5 @@
 package com.mobile.android.chameapps.timebaskets.room.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
 import io.reactivex.Observable
@@ -12,10 +11,10 @@ interface CategoriesDao {
     fun findAll(): Observable<List<Category>>
 
     @Query("SELECT * FROM categories ORDER BY timestamp DESC LIMIT 1")
-    fun findLast(): LiveData<Category>
+    fun findLast(): Observable<Category>
 
     @Query("SELECT * FROM categories WHERE id=:id")
-    fun findById(id: String): Category
+    fun findById(id: String): Observable<Category>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(category: Category): Long

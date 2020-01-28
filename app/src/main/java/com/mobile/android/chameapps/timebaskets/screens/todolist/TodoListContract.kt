@@ -9,18 +9,24 @@ class TodoListContract {
     interface View : BaseContract.View {
 
         fun displayItems(list: List<Item>)
+
+        fun displayBackground(byteArray: ByteArray?)
     }
 
     interface Presenter : BaseContract.Presenter<View> {
 
-        fun loadItems()
+        fun loadItems(categoryId: Long)
+
+        fun loadBackground(categoryId: Long)
 
         fun saveItem(item: Item)
     }
 
     interface Model : BaseContract.Model {
 
-        fun loadItems(): Observable<List<Item>>
+        fun loadItems(categoryId: Long): Observable<List<Item>>
+
+        fun loadBackground(categoryId: Long): Observable<ByteArray?>
 
         fun saveItem(item: Item)
     }
