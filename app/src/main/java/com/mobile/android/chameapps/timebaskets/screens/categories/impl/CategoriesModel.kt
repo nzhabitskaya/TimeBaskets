@@ -12,7 +12,7 @@ import io.reactivex.disposables.CompositeDisposable
 
 class CategoriesModel(private val categoriesDao: CategoriesDao) : CategoriesContract.Model {
 
-    private var subscriptions: CompositeDisposable? = null
+    private var subscriptions: CompositeDisposable? = CompositeDisposable()
 
     override fun unsubscribe() {
         subscriptions?.dispose()
