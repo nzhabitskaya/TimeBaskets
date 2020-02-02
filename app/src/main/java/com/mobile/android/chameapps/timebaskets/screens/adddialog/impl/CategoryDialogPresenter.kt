@@ -1,9 +1,9 @@
-package com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl
+package com.mobile.android.chameapps.timebaskets.screens.adddialog.impl
 
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.CategoryDialogContract
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.CategoryDialogContract
 import com.mobile.android.chameapps.timebaskets.tools.Util
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable

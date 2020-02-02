@@ -11,7 +11,7 @@ import com.mobile.android.chameapps.timebaskets.R
 import com.mobile.android.chameapps.timebaskets.application.MyApplication
 import com.mobile.android.chameapps.timebaskets.room.enitities.Category
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl.CategoryDialogActivity
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.impl.CategoryDialogActivity
 import com.mobile.android.chameapps.timebaskets.screens.todolist.impl.TodoListActivity
 import kotlinx.android.synthetic.main.category.view.*
 import java.io.ByteArrayInputStream

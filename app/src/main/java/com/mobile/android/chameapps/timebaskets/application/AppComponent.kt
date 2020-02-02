@@ -4,9 +4,9 @@ import com.mobile.android.chameapps.timebaskets.room.di.RoomModule
 import com.mobile.android.chameapps.timebaskets.screens.categories.CategoriesContract
 import com.mobile.android.chameapps.timebaskets.screens.categories.di.CategoriesModule
 import com.mobile.android.chameapps.timebaskets.screens.categories.impl.CategoriesFragment
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.CategoryDialogContract
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.di.CategoryDialogModule
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.impl.CategoryDialogActivity
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.CategoryDialogContract
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.di.CategoryDialogModule
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.impl.CategoryDialogActivity
 import com.mobile.android.chameapps.timebaskets.screens.todolist.TodoListContract
 import com.mobile.android.chameapps.timebaskets.screens.todolist.di.TodoListModule
 import com.mobile.android.chameapps.timebaskets.screens.todolist.impl.TodoListActivity

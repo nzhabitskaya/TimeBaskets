@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker
+package com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker
 
 import android.widget.ImageView
 import androidx.annotation.DrawableRes

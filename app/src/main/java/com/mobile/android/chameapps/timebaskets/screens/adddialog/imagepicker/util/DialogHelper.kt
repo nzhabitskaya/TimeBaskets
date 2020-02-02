@@ -1,11 +1,11 @@
-package com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.util
+package com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.util
 
 import android.content.Context
 import android.view.LayoutInflater
 import androidx.appcompat.app.AlertDialog
 import com.mobile.android.chameapps.timebaskets.R
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.constant.ImageProvider
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.listener.ResultListener
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.constant.ImageProvider
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.listener.ResultListener
 import kotlinx.android.synthetic.main.dialog_choose_app.view.*
 
 internal object DialogHelper {

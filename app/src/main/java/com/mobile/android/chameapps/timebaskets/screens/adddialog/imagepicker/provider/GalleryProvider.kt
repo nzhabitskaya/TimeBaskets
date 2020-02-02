@@ -1,13 +1,13 @@
-package com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.provider
+package com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.provider
 
 import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import androidx.core.app.ActivityCompat.requestPermissions
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.util.FileUriUtils
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.ImagePickerActivity
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.util.IntentUtils
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.util.PermissionUtil
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.util.FileUriUtils
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.ImagePickerActivity
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.util.IntentUtils
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.util.PermissionUtil
 import java.io.File
 
 class GalleryProvider(activity: ImagePickerActivity) : BaseProvider(activity) {

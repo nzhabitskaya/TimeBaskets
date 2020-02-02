@@ -1,4 +1,4 @@
-package com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker
+package com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker
 
 import android.app.Activity
 import android.content.Context
@@ -7,8 +7,8 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.constant.ImageProvider
-import com.mobile.android.chameapps.timebaskets.screens.add_dialog.imagepicker.provider.GalleryProvider
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.constant.ImageProvider
+import com.mobile.android.chameapps.timebaskets.screens.adddialog.imagepicker.provider.GalleryProvider
 import java.io.File
 
 class ImagePickerActivity : AppCompatActivity() {
